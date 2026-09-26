@@ -141,8 +141,8 @@ public class ServicesService implements com.hospital.system.hospitalmanagementsy
         Inventories inventories1=inventoryRepository.save(inventories.get());
         return InventoriesResponseDto.builder().id(inventories1.getId()).fee(inventories1.getFee())
                 .stock(inventories1.getStock()).name(inventories1.getName())
-                .patientId(inventory.getPatient() != null
-                                        ? inventory.getPatient().getId()
+                .patientId(inventories1.getPatient() != null
+                                        ? inventories1.getPatient().getId()
                                         : null).build();
     }
 
@@ -170,8 +170,8 @@ public class ServicesService implements com.hospital.system.hospitalmanagementsy
         Inventories updatedInv=inventoryRepository.save(inventories);
         return InventoriesResponseDto.builder()
                 .id(updatedInv.getId()).name(updatedInv.getName()).fee(updatedInv.getFee())
-                .stock(updatedInv.getStock()).patientId(inventory.getPatient() != null
-                                        ? inventory.getPatient().getId()
+                .stock(updatedInv.getStock()).patientId(updatedInv.getPatient() != null
+                                        ? updatedInv.getPatient().getId()
                                         : null).build();
 
     }
@@ -183,8 +183,8 @@ public class ServicesService implements com.hospital.system.hospitalmanagementsy
         Inventories inventories1=inventoryRepository.save(inventories);
         return InventoriesResponseDto.builder().id(inventories1.getId()).fee(inventories1.getFee())
                 .stock(inventories1.getStock()).name(inventories1.getName())
-                .patientId(inventory.getPatient() != null
-                                        ? inventory.getPatient().getId()
+                .patientId(inventories1.getPatient() != null
+                                        ? inventories1.getPatient().getId()
                                         : null).build();
     }
 
