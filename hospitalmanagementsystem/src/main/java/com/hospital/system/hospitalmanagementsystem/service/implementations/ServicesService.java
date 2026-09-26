@@ -141,7 +141,9 @@ public class ServicesService implements com.hospital.system.hospitalmanagementsy
         Inventories inventories1=inventoryRepository.save(inventories.get());
         return InventoriesResponseDto.builder().id(inventories1.getId()).fee(inventories1.getFee())
                 .stock(inventories1.getStock()).name(inventories1.getName())
-                .patientId(inventories1.getPatient().getId()).build();
+                .patientId(inventory.getPatient() != null
+                                        ? inventory.getPatient().getId()
+                                        : null).build();
     }
 
     @Override
@@ -168,7 +170,9 @@ public class ServicesService implements com.hospital.system.hospitalmanagementsy
         Inventories updatedInv=inventoryRepository.save(inventories);
         return InventoriesResponseDto.builder()
                 .id(updatedInv.getId()).name(updatedInv.getName()).fee(updatedInv.getFee())
-                .stock(updatedInv.getStock()).patientId(updatedInv.getPatient().getId()).build();
+                .stock(updatedInv.getStock()).patientId(inventory.getPatient() != null
+                                        ? inventory.getPatient().getId()
+                                        : null).build();
 
     }
     @Override
@@ -179,7 +183,9 @@ public class ServicesService implements com.hospital.system.hospitalmanagementsy
         Inventories inventories1=inventoryRepository.save(inventories);
         return InventoriesResponseDto.builder().id(inventories1.getId()).fee(inventories1.getFee())
                 .stock(inventories1.getStock()).name(inventories1.getName())
-                .patientId(inventories1.getPatient().getId()).build();
+                .patientId(inventory.getPatient() != null
+                                        ? inventory.getPatient().getId()
+                                        : null).build();
     }
 
 
