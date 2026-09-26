@@ -33,7 +33,7 @@ public class SecurityConfig {
                 new CorsConfiguration();
 
         configuration.setAllowedOrigins(
-                List.of("https://hospital-management-frontend-oegc.vercel.app")
+                List.of("https://hospital-management-frontend-ekfk.vercel.app")
         );
 
         configuration.setAllowedMethods(
