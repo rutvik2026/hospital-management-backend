@@ -134,6 +134,9 @@ public class DiagnosisServiceImplementation implements DiagnosisService {
                 .orElseThrow(()->new RuntimeException("Invalide appoint id"));
 
         Diagnosis diagnosis=appointment.getDiagnosis();
+        if (diagnosis == null) {
+        return null;
+    }
         return DiagnosisResponseDto.builder()
                 .id(diagnosis.getId())
                 .discription(diagnosis.getDiscription()).appointmentId(appointmentId)
