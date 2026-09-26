@@ -33,7 +33,8 @@ public class SecurityConfig {
                 new CorsConfiguration();
 
         configuration.setAllowedOrigins(
-                List.of("https://hospital-management-frontend-ekfk.vercel.app")
+                List.of("http://localhost:5173",
+                "https://hospital-management-frontend-ekfk-8n3dof90j.vercel.app")
         );
 
         configuration.setAllowedMethods(
