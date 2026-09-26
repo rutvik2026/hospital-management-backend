@@ -34,7 +34,7 @@ public class SecurityConfig {
 
         configuration.setAllowedOrigins(
                 List.of("http://localhost:5173",
-                "https://hospital-management-frontend-ekfk-8n3dof90j.vercel.app")
+                "https://hospital-management-frontend-ekfk-8n3dof90j.vercel.app","https://hospital-management-frontend-ekfk.vercel.app")
         );
 
         configuration.setAllowedMethods(
