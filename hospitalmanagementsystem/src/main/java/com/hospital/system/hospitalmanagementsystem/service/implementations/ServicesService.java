@@ -79,7 +79,7 @@ public class ServicesService implements com.hospital.system.hospitalmanagementsy
         //serviceRepository.save(services.get());
         return InventoriesResponseDto.builder().id(inventories1.getId()).fee(inventories1.getFee())
                 .stock(inventories1.getStock()).name(inventories1.getName())
-                .patientId(inventories1.getPatient().getId()).build();
+                .build();
     }
 
     @Override
